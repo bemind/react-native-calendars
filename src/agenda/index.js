@@ -308,7 +308,6 @@ export default class AgendaView extends Component {
         onScroll={() => {}}
         ref={c => (this.list = c)}
         theme={this.props.theme}
-        renderHeader={this.props.renderListHeader}
       />
     );
   }
@@ -435,6 +434,7 @@ export default class AgendaView extends Component {
         style={[this.props.style, { flex: 1, overflow: 'hidden' }]}
       >
         <View style={this.styles.reservations}>
+          {this.props.renderListHeader ? this.props.renderListHeader() : null}
           {this.renderReservations()}
         </View>
         <Animated.View style={headerStyle}>

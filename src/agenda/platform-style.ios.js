@@ -11,7 +11,7 @@ export default function platformStyles(appStyle) {
       position: 'absolute',
       left: 0,
       right: 0,
-      top: 0,
+      top: -5,
       flexDirection: 'row',
       justifyContent: 'space-around',
       marginLeft: 15,
@@ -19,6 +19,6 @@ export default function platformStyles(appStyle) {
       paddingTop: 15,
       paddingBottom: 7,
       backgroundColor: appStyle.calendarBackground
-    },
+    }
   };
 }

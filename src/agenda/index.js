@@ -283,11 +283,16 @@ export default class AgendaView extends Component {
       calendarScrollable: false
     });
 
+    this.setScrollPadPosition(this.initialScrollPadPosition(), true);
+    this.calendar.scrollToDay(
+      this.state.selectedDay,
+      this.calendarOffset(),
+      true
+    );
+
     if (this.props.onCalendarToggled) {
       this.props.onCalendarToggled(false);
     }
-
-    this.setScrollPadPosition(this.initialScrollPadPosition(), true);
   }
 
   renderReservations() {

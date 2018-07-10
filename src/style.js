@@ -1,4 +1,4 @@
-import {Platform} from 'react-native';
+import { Platform } from 'react-native';
 
 export const foregroundColor = '#ffffff';
 export const backgroundColor = '#f4f4f4';
@@ -18,6 +18,7 @@ export const textMonthFontFamily = 'System';
 export const textDayHeaderFontFamily = 'System';
 
 export const textMonthFontWeight = '300';
+export const textDayFontWeight = '300';
 
 export const textDayFontSize = 16;
 export const textMonthFontSize = 16;

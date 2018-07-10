@@ -276,6 +276,18 @@ export default class AgendaView extends Component {
     }
   }
 
+  handleCloseCalendar() {
+    this.setState({
+      calendarScrollable: false
+    });
+
+    if (this.props.onCalendarToggled) {
+      this.props.onCalendarToggled(false);
+    }
+
+    this.setScrollPadPosition(this.initialScrollPadPosition(), true);
+  }
+
   renderReservations() {
     return (
       <ReservationsList

@@ -82,7 +82,9 @@ export default class AgendaView extends Component {
     // Set this true while waiting for new data from a refresh.
     refreshing: PropTypes.bool,
     // Display loading indicador. Default = false
-    displayLoadingIndicator: PropTypes.bool
+    displayLoadingIndicator: PropTypes.bool,
+    // Render Header above List
+    renderListHeader: PropTypes.func
   };
 
   constructor(props) {
@@ -306,6 +308,7 @@ export default class AgendaView extends Component {
         onScroll={() => {}}
         ref={c => (this.list = c)}
         theme={this.props.theme}
+        renderHeader={this.props.renderListHeader || null}
       />
     );
   }

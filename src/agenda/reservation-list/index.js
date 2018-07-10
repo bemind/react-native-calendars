@@ -30,7 +30,8 @@ class ReactComp extends Component {
     topDay: PropTypes.instanceOf(XDate),
     refreshControl: PropTypes.element,
     refreshing: PropTypes.bool,
-    onRefresh: PropTypes.func
+    onRefresh: PropTypes.func,
+    renderHeader: PropTypes.func
   };
 
   constructor(props) {
@@ -210,6 +211,7 @@ class ReactComp extends Component {
         refreshControl={this.props.refreshControl}
         refreshing={this.props.refreshing || false}
         onRefresh={this.props.onRefresh}
+        ListHeaderComponent={this.props.renderHeader}
       />
     );
   }

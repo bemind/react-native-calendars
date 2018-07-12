@@ -183,6 +183,12 @@ class ReactComp extends Component {
     return { reservations, scrollPosition };
   }
 
+  renderPadding = () => {
+    return (
+      <View style={{ height: 20, backgroundColor: 'transparent', flex: 1 }} />
+    );
+  };
+
   render() {
     if (
       !this.props.reservations ||
@@ -212,6 +218,7 @@ class ReactComp extends Component {
         refreshing={this.props.refreshing || false}
         onRefresh={this.props.onRefresh}
         ListHeaderComponent={this.props.renderHeader}
+        ListFooterComponent={() => this.renderPadding()}
       />
     );
   }

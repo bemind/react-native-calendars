@@ -1,12 +1,12 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import * as defaultStyle from '../../../style';
 
 const STYLESHEET_ID = 'stylesheet.day.period';
 
 const FILLER_HEIGHT = 34;
 
-export default function styleConstructor(theme={}) {
-  const appStyle = {...defaultStyle, ...theme};
+export default function styleConstructor(theme = {}) {
+  const appStyle = { ...defaultStyle, ...theme };
   return StyleSheet.create({
     wrapper: {
       flex: 1,
@@ -39,7 +39,7 @@ export default function styleConstructor(theme={}) {
       marginTop: 7,
       fontSize: appStyle.textDayFontSize,
       fontFamily: appStyle.textDayFontFamily,
-      fontWeight: '300',
+      fontWeight: appStyle.textDayFontWeight,
       color: appStyle.dayTextColor || '#2d4150',
       backgroundColor: 'rgba(255, 255, 255, 0)'
     },
@@ -48,7 +48,7 @@ export default function styleConstructor(theme={}) {
     },
     todayText: {
       fontWeight: '500',
-      color: theme.todayTextColor || appStyle.dayTextColor,
+      color: theme.todayTextColor || appStyle.dayTextColor
       //color: appStyle.textLinkColor
     },
     disabledText: {
